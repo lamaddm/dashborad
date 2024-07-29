@@ -27,5 +27,3 @@
 <img width="1440" alt="Screenshot 1446-01-23 at 8 57 30 PM" src="https://github.com/user-attachments/assets/32fb14d4-aa4a-4936-9042-3d2531e22409">
 
 
-
-<img width="1440" alt="Screenshot 1446-01-23 at 8 57 46 PM" src="https://github.com/user-attachments/assets/7aedfc8e-4ca8-4e2d-abfc-aa0e475c01d5">
