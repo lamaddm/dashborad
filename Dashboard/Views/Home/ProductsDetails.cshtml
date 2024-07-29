@@ -1,0 +1,131 @@
+﻿
+
+@{
+    var productD = ViewBag.ProductD as IEnumerable<dynamic>;
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <h1 class="display-4"><span class="badge bg-light bordred text-dark">إضافة تفاصيل منتج </span></h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-dark" onclick="openAddDetailsModal()">
+                <i class="fs-4 bi-cart-plus p-2"></i> أضافة تفاصيل منتج
+            </button>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="AddDeatils">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">اضافه منتج جديد </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form asp-action="CreateDeatils" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-sm-6 mb-3">
+                                <label for="productSelect" class="form-label">اختر المنتج</label>
+                                <select class="form-select" id="productSelect" name="ProductId">
+                                    @if (ViewBag.Products != null && ViewBag.Products.Count > 0)
+                                    {
+                                        @foreach (var items in ViewBag.Products)
+                                        {
+                                            <option value="@items.Id">@items.Name</option>
+                                        }
+                                    }
+                                </select>
+                                <label for="qty" class="form-label mt-3">الكمية</label>
+                                <input type="number" name="Qty" class="form-control" id="qty" />
+                                <span class="text-blue"></span>
+                            </div>
+                            <div class="col-sm-6 mb-3">
+                                <label for="price" class="form-label">السعر</label>
+                                <input type="number" name="Price" class="form-control" id="price" />
+                                <span class="text-blue"></span>
+                                <label for="color" class="form-label mt-3">اللون</label>
+                                <input type="text" name="Color" class="form-control" id="color" />
+                                <span class="text-blue"></span>
+                                <label for="image" class="form-label mt-3">صورة المنتج</label>
+                                <input type="file" class="form-control" name="Images" accept="image/*" id="image" />
+                                <span class="text-blue"></span>
+                            </div>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-start">
+                            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">اضافة</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء الأمر</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow-sm mt-4">
+                        <div class="card-body">
+
+                            <table class="table table-bordered text-center">
+                                <thead class="table-blue">
+                                    <tr>
+                                        <th>رقم التفاصيل</th>
+                                        <th>اسم المنتج</th>
+                                        <th>السعر</th>
+                                        <th>اللون</th>
+                                        <th>الكمية</th>
+                                        <th>صورة المنتج</th>
+                                        <th colspan="2">الإجراءات</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (productD != null && productD.Any())
+                                    {
+                                        foreach (var items in productD)
+                                        {
+                                            <tr>
+                                                <td>@items.id</td>
+                                                <td>@items.name</td>
+                                                <td>@items.price</td>
+                                                <td>@items.color</td>
+                                                <td>@items.qty</td>
+                                                <td><img src="~/img/@items.images" width="100" height="100" /></td>
+                                                <td><a asp-action="DeleteD" asp-route-id="@items.id"><i class="bi bi-archive-fill text-danger"></i></a></td>
+                                                <td><a asp-action="EditD" asp-route-id="@items.id"><i class="bi bi-pencil-fill text-success"></i></a></td>
+                                            </tr>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <tr>
+                                            <td colspan="8">لا توجد بيانات لعرضها.</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script>function openAddDetailsModal() {
+        var modal = new bootstrap.Modal(document.getElementById('AddDeatils'));
+        modal.show();
+    }</script>
+
+

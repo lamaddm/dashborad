@@ -1,0 +1,76 @@
+﻿@model Damegedproducts
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <h1 class="display-4 "><span class="badge bg-light bordred text-dark">  تعريف منتج تالف </span> </h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-dark" onclick="AddNewDemag()">  <i class="fs-4 bi-cart-plus p-2"></i>  تعريف منتج تالف </button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" id="demag">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"> تعريف منتج تالف   </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form asp-action="AddDemag" method="post">
+                    <div class="row">
+                        <div class="col">
+                            <label class="form-label" for="ProductId">اسم المنتج</label>
+                            <select class="form-select" id="ProductId" asp-for="ProductId">
+                                @foreach (var items in ViewBag.products)
+                                {
+                                    <option value="@items.Id">@items.Name</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label class="form-label" for="Qty">الكمية</label>
+                            <input type="number" id="Qty" asp-for="Qty" class="form-control form-control-sm" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء الأمر</button>
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">حفظ</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card shadow-sm mt-4">
+    <div class="card-body">
+        <table class="table table-bordered text-center">
+            <thead class="table-blue">
+                <tr>
+                    <td>رقم المنتج التالف</td>
+                    <td>اسم المنتج</td>
+                    <td>لون المنتج</td>
+                    <td> الكمية</td>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ViewBag.damage)
+                {
+                    <tr>
+                        <td>@item.id</td>
+                        <td>@item.name</td>
+                        <td>@item.color</td>
+                        <td>@item.qty</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

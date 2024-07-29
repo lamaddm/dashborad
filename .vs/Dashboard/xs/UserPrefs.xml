@@ -1,0 +1,84 @@
+﻿<Properties StartupConfiguration="{67C86728-25D6-4BE8-8574-9A2465FADC1C}|https">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Dashboard/Views/Home/ProductsDetails.cshtml">
+    <Files>
+      <File FileName="Dashboard/Controllers/HomeController.cs" />
+      <File FileName="Dashboard/Views/Shared/_Layout.cshtml" />
+      <File FileName="Dashboard/Views/Shared/_Layout.cshtml.css" />
+      <File FileName="Dashboard/Program.cs" />
+      <File FileName="Dashboard/appsettings.json" />
+      <File FileName="Dashboard/Areas/Identity/Data/userContext.cs" />
+      <File FileName="Dashboard/Migrations/user/20240727101354_usermigration.cs" />
+      <File FileName="Dashboard/Migrations/user/userContextModelSnapshot.cs" />
+      <File FileName="Dashboard/Models/Products.cs" />
+      <File FileName="Dashboard/Views/Home/Index.cshtml" />
+      <File FileName="Dashboard/Views/Home/Demag.cshtml" />
+      <File FileName="Dashboard/Views/Home/Addnewitems.cshtml" />
+      <File FileName="Dashboard/Data/ApplicationDbContext.cs" />
+      <File FileName="Dashboard/wwwroot/js/min.js" />
+      <File FileName="Dashboard/Models/ErrorViewModel.cs" />
+      <File FileName="Dashboard/Models/ProductsDetails.cs" />
+      <File FileName="Dashboard/Views/Home/Privacy.cshtml" />
+      <File FileName="Dashboard/Models/Damegedproducts.cs" />
+      <File FileName="Dashboard/Views/Home/Edit.cshtml" />
+      <File FileName="Dashboard/Areas/Identity/Data/DashboardUser.cs" />
+      <File FileName="Dashboard/Views/Shared/_LoginPartial.cshtml" />
+      <File FileName="Dashboard/Views/Shared/_LoginPartialUser.cshtml" />
+      <File FileName="Dashboard/Migrations/user/20240727101354_usermigration.Designer.cs" />
+      <File FileName="Dashboard/Areas/Identity/Pages/Account/_ViewImports.cshtml" />
+      <File FileName="Dashboard/Areas/Identity/Pages/Account/ConfirmEmail.cshtml" />
+      <File FileName="Dashboard/Areas/Identity/Pages/Account/ForgotPassword.cshtml" />
+      <File FileName="Dashboard/Areas/Identity/Pages/Account/Login.cshtml" />
+      <File FileName="Dashboard/Areas/Identity/Pages/Account/Logout.cshtml" />
+      <File FileName="Dashboard/Areas/Identity/Pages/Account/Register.cshtml" />
+      <File FileName="Dashboard/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml" />
+      <File FileName="Dashboard/Areas/Identity/Pages/_ViewImports.cshtml" />
+      <File FileName="Dashboard/Areas/Identity/Pages/_ViewStart.cshtml" />
+      <File FileName="Dashboard/Migrations/ApplicationDbContextModelSnapshot.cs" />
+      <File FileName="Dashboard/wwwroot/js/dashboard.js" />
+      <File FileName="Dashboard/Views/Home/ProductsDetails.cshtml" Line="6" Column="1" />
+      <File FileName="Dashboard/wwwroot/css/site.css" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Dashboard" expanded="True">
+            <Node name="Dashboard" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Areas" expanded="True">
+                <Node name="Identity" expanded="True">
+                  <Node name="Data" expanded="True" />
+                  <Node name="Pages" expanded="True">
+                    <Node name="Account" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Migrations" expanded="True">
+                <Node name="user" expanded="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True">
+                  <Node name="ProductsDetails.cshtml" selected="True" />
+                </Node>
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="img" expanded="True" />
+                <Node name="js" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Dashboard PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>
